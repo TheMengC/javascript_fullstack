@@ -1,0 +1,11 @@
+/**index.wxss**/
+swiper{
+  /* 100vh 当前设备的 可视区域的高度 */
+  height: 100vh;
+}
+image {
+  width: 100%;
+}
+.content view {
+  text-align: center;
+}

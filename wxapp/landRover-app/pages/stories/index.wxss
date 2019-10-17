@@ -1,0 +1,12 @@
+/* pages/stories/index.wxss */
+.card image{
+  position: relative;
+  width: 100%;
+}
+.card .lable{
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  color: #fff;
+  background-color: #000;
+}
