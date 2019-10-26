@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var name = ''
+    function test() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+        console.log('猛哥')
+        name = '猛哥'
+        resolve('长得很帅')
+        // reject('error')
+        }, 500)
+      })
+      
+    }
+    function xq() {
+      // 成功  resolve  .then
+      // 失败  reject   .catch
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+        console.log(name + '相亲')
+        resolve('骗到很多妹子')
+        }, 1000) 
+      })
+      
+    }
+    function marry() {
+      console.log(name + '结婚了！')
+    }
+
+
+
+    // test()
+    //   .then((res) => {
+    //     // console.log(res)
+    //     xq()
+    //       .then((res) => {
+    //         marry()
+    //       })
+    //   })
+
+    // .catch((err) => {
+    //   console.log(err)
+    // })
+
+    // test()
+    //   .then(xq)
+    //   .then(marry)
+
+
+
+    // Promise.all([test(), xq()]).then((value) => {
+    //   console.log(value, '--------------------')
+    //   marry()
+    // })
+
+    
+    Promise.race([test(), xq()]).then((value) => {
+      console.log(value, '--------------------')
+      marry()
+    })
+  </script>
+</body>
+</html>
