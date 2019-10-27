@@ -34,10 +34,10 @@
         var eles = document.querySelectorAll('img[data-original][lazyload]')
         // eles.forEach(() => {})
         Array.prototype.forEach.call(eles, function(item, index) {
-          var rects
+          var rect
           if(!item.dataset.original) return
-          rects = item.getBoundingClientRect()
-          if(rects.bottom >= 0 && rect.top < viewHeight) {
+          rect = item.getBoundingClientRect()
+          if(rect.bottom >= 0 && rect.top < viewHeight) {
             !function () {
               var img= new Image()
               img.src= item.dataset.original
