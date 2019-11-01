@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .out{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+    .in{
+      width: 100px;
+      height: 100px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="out">
+    <div class="in">
+      in
+    </div>
+  </div>
+  <script>
+    const inNode = document.querySelector('.in')
+    const out = document.querySelector('.out')
+    inNode.addEventListener('click',function() {
+      console.log(1)
+    })
+    out.addEventListener('click',function() {
+      console.log('out')
+    })
+  </script>
+</body>
+</html>
