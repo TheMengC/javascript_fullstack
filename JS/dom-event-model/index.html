@@ -10,6 +10,8 @@
       width: 200px;
       height: 200px;
       background-color: red;
+      top: 50%;
+      left: 50%;
     }
     .in{
       width: 100px;
@@ -19,6 +21,7 @@
   </style>
 </head>
 <body>
+  <a href="./readme.md" id="md">MD</a>
   <div class="out">
     <div class="in">
       in
@@ -27,11 +30,34 @@
   <script>
     const inNode = document.querySelector('.in')
     const out = document.querySelector('.out')
+    window.addEventListener('click',function() {
+      console.log('window')
+    },false)
+
+    document.addEventListener('click',function() {
+      console.log('document')
+    },false)
+
+    document.documentElement.addEventListener('click',function() {
+      console.log('documentElement')
+    },false)
+
     inNode.addEventListener('click',function() {
       console.log(1)
-    })
+    },false)
+
     out.addEventListener('click',function() {
       console.log('out')
+    },false)
+
+    inNode.addEventListener('click', function() {
+      console.log(2)
+    })
+    inNode.onClick = () => {console.log(3)}
+    inNode.onClick = () => {console.log(4)}
+
+    document.addEventListener('click', function(e) {
+      e.preventDefault()
     })
   </script>
 </body>
