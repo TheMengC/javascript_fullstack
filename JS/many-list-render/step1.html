@@ -19,6 +19,10 @@
     }
     let end = Date.now()
     console.log('时间', end - start)
+    setTimeout(() => {
+      const end1 = Date.now()
+      console.log('渲染时间', end1 - end)
+    }, 0)
   </script>
 </body>
 </html>
