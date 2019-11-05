@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/logs/logs",
     "pages/main/main",
     "pages/lesson/lesson",
-    "pages/mine/mine"
+    "pages/mine/mine",
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //函数式编程
+    //过程抽象
+    //无参化
+    function add(a, b, c) {
+      console.log(a + b + c)
+    }
+    add(1, 2, 3)
+    let arr = [1, 2, 3]
+    arr.forEach(add)
+    //函数是一等公民
+    //函数  和其他变量一样  有同等地位
+    arr.forEach((item, i, arr) => {
+      console.log(item, i, arr)
+    })
+
+  </script>
+</body>
+</html>
