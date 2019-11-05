@@ -4,16 +4,30 @@
   height: 60rpx;
   width: 100%;
   line-height: 60rpx;
+  margin-bottom: 10rpx;
 }
 .header-left{
   position: absolute;
   left: 30rpx;
-  top: 30rpx;
+  top: 20rpx;
 }
 .tpp{
   width: 40rpx;
   height: 40rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
 }
 .address{
   line-height: 40rpx;
+  font-size: 25rpx;
+  vertical-align: middle;
+}
+.header-right{
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  font-size: 25rpx;
+}
+.lsHit{
+  margin-right: 40rpx;
 }
