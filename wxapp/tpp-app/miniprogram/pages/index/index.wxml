@@ -1,7 +1,13 @@
 <!--miniprogram/pages/index/index.wxml-->
-<view class="header">
-  <view class="header-left">
-    <image class="tpp" src="../../images/tpp.png" />
-    <text>南昌</text>
+<view class="index">
+  <view class="header">
+    <view class="header-left">
+      <image class="tpp" src="../../images/tpp.png" />
+      <text class="address">南昌</text>
+    </view>
+    <view class="header-right">
+      <text class="lsHit">正在热映</text>
+      <text class="upcoming">即将上映</text>
+    </view>
   </view>
 </view>

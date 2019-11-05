@@ -1,1 +1,19 @@
 /* miniprogram/pages/index/index.wxss */
+.header {
+  position: relative;
+  height: 60rpx;
+  width: 100%;
+  line-height: 60rpx;
+}
+.header-left{
+  position: absolute;
+  left: 30rpx;
+  top: 30rpx;
+}
+.tpp{
+  width: 40rpx;
+  height: 40rpx;
+}
+.address{
+  line-height: 40rpx;
+}
