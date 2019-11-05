@@ -1,0 +1,7 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class="header">
+  <view class="header-left">
+    <image class="tpp" src="../../images/tpp.png" />
+    <text>南昌</text>
+  </view>
+</view>
