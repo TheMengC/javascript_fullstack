@@ -10,4 +10,13 @@
       <text class="upcoming">即将上映</text>
     </view>
   </view>
+  <view class="slideShow">
+    <swiper indicator-dots="true" autoplay="true" duration="{{duration}}" interval="{{interval}}" circular="true">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image class="slide-image" src="{{item}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 </view>

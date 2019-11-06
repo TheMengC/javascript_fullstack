@@ -31,3 +31,11 @@
 .lsHit{
   margin-right: 40rpx;
 }
+swiper{
+  margin-top: 30rpx;
+  height: 260rpx;
+}
+swiper-item image{
+  width: 100%;
+  height: 100%;
+}
