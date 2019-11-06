@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1495826_bkpgl8pzzmu.css">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    input{
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+    input[name="rate"]{
+      font-family: "iconfont";
+      font-size: 30px;
+      padding-right: 10px;
+      transition: transform .2s ease;
+      transform: rotateZ(180deg);
+    }
+    input[name="rate"]::after{
+      content:'\e600';
+      color: #999;
+    }
+    input[name="rate"]:checked::after{
+      content:'\e663';
+      color: #ffa822;
+    }
+    input[name="rate"]:checked ~ input[name="rate"]::after{
+      content:'\e663';
+      color: #ffa822;
+    }
+    .rate-content{
+      display: flex;
+      /* flex-flow: row-reverse; */
+      transform: rotateZ(180deg);
+    }
+    input[name="rate"]:hover{
+      transform: scale(1.2) rotateZ(180deg);
+    }
+    input[name="rate"]:hover::after{
+      content:'\e663';
+      color: #ffa822;
+    }
+    input[name="rate"]:hover ~ input[name="rate"]::after{
+      content:'\e663';
+      color: #ffa822;
+    }
+  </style>
+</head>
+<body>
+  <div class="rate-content">
+    <input type="radio" name="rate">
+    <input type="radio" name="rate">
+    <input type="radio" name="rate">
+    <input type="radio" name="rate">
+    <input type="radio" name="rate">
+  </div>
+</body>
+</html>
