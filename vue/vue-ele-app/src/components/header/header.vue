@@ -166,6 +166,7 @@ export default {
       background rgba(0, 0, 0, .2)
       border-radius 14px
       text-align center
+      z-index 10
       .count
         vertical-align top
       .icon-keyboard_arrow_right

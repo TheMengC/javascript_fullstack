@@ -54,6 +54,7 @@ export default {
   &-item
     flex 1
     text-align center
+    z-index -1
     a
       text-decoration none
       display block
