@@ -1,4 +1,4 @@
-// miniprogram/pages/cinema/cinema.js
+// pages/mine/mine.js
 Page({
 
   /**

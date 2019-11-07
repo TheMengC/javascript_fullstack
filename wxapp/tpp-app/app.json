@@ -11,7 +11,6 @@
     "navigationBarTitleText": "淘票票",
     "navigationBarTextStyle": "black"
   },
-  "cloud": true,
   "tabBar": {
     "list": [
       {
@@ -34,5 +33,6 @@
       }
     ]
   },
+  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

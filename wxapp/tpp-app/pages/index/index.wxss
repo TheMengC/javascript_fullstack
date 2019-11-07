@@ -15,11 +15,24 @@
   width: 40rpx;
   height: 40rpx;
   margin-right: 10rpx;
+  float: left;
   vertical-align: middle;
 }
-.address{
-  line-height: 40rpx;
-  font-size: 25rpx;
+.header-left text{
+  float: left;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #666;
+  vertical-align: middle;
+}
+.triangle{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+  margin-left: 2rpx;
+  float: left;
   vertical-align: middle;
 }
 .header-right{

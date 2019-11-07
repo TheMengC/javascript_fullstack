@@ -1,18 +1,11 @@
-// miniprogram/pages/index/index.js
+// pages/cinema/cinema.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      '../../images/zjz.jpg',
-      '../../images/tqzz.jpg',
-      '../../images/sndn.jpg',
-      '../../images/syr.jpg'
-    ],
-    interval: 3000,
-    duration: 800
+
   },
 
   /**

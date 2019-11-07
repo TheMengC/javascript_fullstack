@@ -1,11 +1,18 @@
-// miniprogram/pages/mine/mine.js
+// pages/index/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    imgUrls: [
+      '../../images/zjz.jpg',
+      '../../images/tqzz.jpg',
+      '../../images/sndn.jpg',
+      '../../images/syr.jpg'
+    ],
+    interval: 3000,
+    duration: 800
   },
 
   /**
@@ -26,7 +33,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

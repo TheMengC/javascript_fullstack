@@ -3,11 +3,12 @@
   <view class="header">
     <view class="header-left">
       <image class="tpp" src="../../images/tpp.png" />
-      <text class="address">南昌</text>
+      <text>南昌</text>
+      <view class="triangle"></view>
     </view>
     <view class="header-right">
-      <text class="lsHit">正在热映</text>
-      <text class="upcoming">即将上映</text>
+      <span class="lsHit">正在热映</span>
+      <span class="upcoming">即将上映</span>
     </view>
   </view>
   <view class="slideShow">

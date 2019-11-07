@@ -52,7 +52,7 @@ function doubanSpider(url, cb) {
 }
 
 http.createServer((req, res) => {
-  doubanSpider('https://movie.douban.com/top250?start=0&filter=', (data) => {
+  doubanSpider('https://h5.m.taopiaopiao.com/app/moviemain/pages/index/index.html?from=outer', (data) => {
     // text/pain 纯文本
     // text/html html
     // mine  类型
