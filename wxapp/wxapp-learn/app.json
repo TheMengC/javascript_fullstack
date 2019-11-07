@@ -1,35 +1,34 @@
 {
   "pages": [
-    "pages/logs/logs",
     "pages/main/main",
     "pages/lesson/lesson",
-    "pages/mine/mine",
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#48A6FD",
-    "navigationBarTitleText": "旅梦开发团",
+    "navigationBarTitleText": "猫眼电影",
     "navigationBarTextStyle": "white"
   },
-  "table":{
-    "list":[
+  "tabBar": {
+    "list": [
       {
         "pagePath": "pages/main/main",
-        "text":"首页",
-        "iconPath":"images/shouye.png",
-        "selectedIconPath": "images/hover-shouye.png"
+        "text": "首页",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath":"images/hover-shouye.png"
       },
       {
-        "pagePath": "pages/main/main",
-        "text":"课程",
-        "iconPath":"images/class.png",
-        "selectedIconPath": "images/hover-class.png"
+        "pagePath": "pages/lesson/lesson",
+        "text": "课程",
+        "iconPath": "images/class.png",
+        "selectedIconPath":"images/hover-class.png"
       },
       {
-        "pagePath": "pages/main/main",
-        "text":"我的",
-        "iconPath":"images/mine.png",
-        "selectedIconPath": "images/hover-mine.png"
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath":"images/hover-mine.png"
       }
     ]
   },
