@@ -13,7 +13,7 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
-    <router-view/>
+    <router-view :seller="seller" />
   </div>
 </template>
 
@@ -54,7 +54,6 @@ export default {
   &-item
     flex 1
     text-align center
-    z-index -1
     a
       text-decoration none
       display block
