@@ -99,13 +99,15 @@ export default {
     },
     selectFoods () {
       let foods = []
-      this.goods.forEach(good => {
-        good.foods.forEach(food => {
-          if (food.count) {
-            foods.push(food)
+      for (let good of this.goods) {
+        if (good.foods) {
+          for (let food of good.foods) {
+            if (food.count) {
+              foods.push(food)
+            }
           }
-        })
-      })
+        }
+      }
     }
   },
   methods: {
