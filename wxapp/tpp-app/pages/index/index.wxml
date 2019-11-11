@@ -58,7 +58,7 @@
     </view>
     <view class="item-right">
       <view class="way">
-        <text class="way buy-ticket" wx:if="{{item.way==='购票'}}">{{item.way}}</text>
+        <text class="way buy-ticket"  wx:if="{{item.way==='购票'}}">{{item.way}}</text>
         <text class="way presell" wx:else>{{item.way}}</text> 
       </view>
       <text class="preferential" wx:if="{{item.preferential}}">{{item.preferential}}</text>
