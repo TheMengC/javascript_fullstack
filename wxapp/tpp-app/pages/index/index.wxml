@@ -20,4 +20,48 @@
       </block>
     </swiper>
   </view>
+  <view class="movie-lists" wx:for="{{movieList}}" wx:key="item">
+    <view class="item-left">
+      <image src="{{item.imgUrl}}" />
+    </view>
+    <view class="item-middle">
+      <view class="movie-name">
+        <text class="movie-name-list">{{item.name}}</text>
+      </view>
+      <view class="movie-type" wx:if="{{item.jiD}}">
+          <text class="movie-type-left">{{item.jiD}}D</text>
+          <text class="movie-type-right" wx:if="{{item.where==='中国巨幕'}}">中国巨幕</text>
+          <text class="movie-type-right" wx:else>IMAX</text>
+      </view>
+      <view>
+        <view class="movie-score" wx:if="{{item.way === '购票'}}">
+          <text class="movie-score-where">淘票票评分</text>
+          <text class="movie-score-number">{{item.grade}}</text>
+        </view>
+        <view class="movie-seeing" wx:else>
+          <text class="movie-seeing-number">{{item.seeing}}</text>
+          <text class="movie-seeing-when">人想看 | 本周五上映</text>
+        </view>
+      </view>
+      <view class="movie-director" wx:if="{{item.director}}">
+        <text>导演：{{item.director}}</text>
+      </view>
+      <view class="movie-actor" wx:if="{{item.actor}}">
+        <text>主演：{{item.actor}}</text>
+      </view>
+      <view class="movie-hot-week" wx:if="{{item.isHot && item.isHot==='一周最热'}}">
+        <text>一周最热</text>
+      </view>
+      <view class="movie-hot-today" wx:if="{{item.isHot && item.isHot==='今日最热'}}">
+        <text class="movie-hot today">今日最热</text>
+      </view>
+    </view>
+    <view class="item-right">
+      <view class="way">
+        <text class="way buy-ticket" wx:if="{{item.way==='购票'}}">{{item.way}}</text>
+        <text class="way presell" wx:else>{{item.way}}</text> 
+      </view>
+      <text class="preferential" wx:if="{{item.preferential}}">{{item.preferential}}</text>
+    </view>
+  </view>
 </view>

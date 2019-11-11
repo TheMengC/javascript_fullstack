@@ -1,4 +1,5 @@
 // pages/index/index.js
+const movieList = require('../../data/movieList.js')
 Page({
 
   /**
@@ -12,7 +13,8 @@ Page({
       '../../images/syr.jpg'
     ],
     interval: 3000,
-    duration: 800
+    duration: 800,
+    movieList: movieList.movieList
   },
 
   /**
