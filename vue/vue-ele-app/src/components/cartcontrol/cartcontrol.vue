@@ -21,6 +21,7 @@ export default {
     addCart (event) {
       if (!this.food.count) {
         this.$set(this.food, 'count', 1)
+        console.log(this.food)
       } else {
         this.food.count++
       }

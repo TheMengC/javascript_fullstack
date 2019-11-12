@@ -4,7 +4,7 @@
   height: 60rpx;
   width: 100%;
   line-height: 60rpx;
-  margin-bottom: 10rpx;
+  margin-bottom: 40rpx;
 }
 .header-left{
   width: 140rpx;
@@ -44,7 +44,9 @@
   font-size: 24rpx;
 }
 .lsHit{
+  display: inline-block;
   margin-right: 40rpx;
+  color: rgb(252, 82, 82);
 }
 swiper{
   margin-top: 45rpx;
@@ -189,5 +191,14 @@ swiper-item image{
   width: 50px;
   height: 24px;
   text-align: center;
+  font-size: 8px;
+}
+.date{
+  /* padding: 20px; */
+  /* padding-left: 12rpx; */
+  padding-bottom: 24rpx;
+}
+.day{
+  display: block;
   font-size: 8px;
 }

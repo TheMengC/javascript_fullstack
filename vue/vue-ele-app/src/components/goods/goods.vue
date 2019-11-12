@@ -46,7 +46,7 @@
       </div>
     </div>
     <!-- 购物车 -->
-    <shopcart :selectFood = "selectFoods" :deliveryPrice = "seller.deliveryPrice" :minPrice="seller.minPrice"></shopcart>
+    <shopcart :selectFoods = "selectFoods" :deliveryPrice = "seller.deliveryPrice" :minPrice="seller.minPrice"></shopcart>
   </div>
 </template>
 
@@ -108,6 +108,7 @@ export default {
           }
         }
       }
+      return foods
     }
   },
   methods: {
