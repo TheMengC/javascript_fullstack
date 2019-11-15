@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import D1 from '@/components/view/demo1/father.vue'
 import D2 from '@/components/view/demo2/father.vue'
 import D3 from '@/components/view/demo3/father.vue'
+import D4 from '@/components/view/demo4/father.vue'
+import D5 from '@/components/view/demo5/father.vue'
 
 Vue.use(Router)
 
@@ -22,6 +24,16 @@ export default new Router({
       path: '/d3',
       name: 'D3',
       component: D3
+    },
+    {
+      path: '/d4',
+      name: 'D4',
+      component: D4
+    },
+    {
+      path: '/d5',
+      name: 'D5',
+      component: D5
     }
   ]
 })

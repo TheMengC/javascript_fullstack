@@ -5,6 +5,8 @@
       <router-link to="/d1">1.父子组建通信</router-link>
       <router-link to="/d2">2.父子组建通信more</router-link>
       <router-link to="/d3">3.子父组建通信</router-link>
+      <router-link to="/d4">4.兄弟组建通信</router-link>
+      <router-link to="/d5">5.兄弟组建通信2</router-link>
     </p>
     <router-view/>
   </div>
