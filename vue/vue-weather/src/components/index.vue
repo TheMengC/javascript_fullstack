@@ -15,7 +15,7 @@
           <dt class="font45">{{cityData.temperature}}℃</dt>
         </dl>
         <dl>
-          <dt>风力：{{cityData.windPower}}|风向：{{cityData.windDirection}} | 空气湿度：{{cityData.humidity}}</dt>
+          <dt>风力：{{cityData.windPower}}  | 风向：{{cityData.windDirection}} | 空气湿度：{{cityData.humidity}}</dt>
         </dl>
       </div>
     </div>
