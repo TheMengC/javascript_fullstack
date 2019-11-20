@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="header-icon">
+    <div class="header-icon" @click="leftEvent">
       <slot name="left-icon"></slot>
     </div>
     <div class="header-cont">
@@ -18,6 +18,11 @@ export default {
   data () {
     return {
 
+    }
+  },
+  methods: {
+    leftEvent () {
+      this.$store.dispatch('setShowSidebar', true)
     }
   }
 }
