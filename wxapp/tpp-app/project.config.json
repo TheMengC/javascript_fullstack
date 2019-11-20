@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.9.2",
 	"appid": "wx87ce8da3bbcffdb2",
-	"projectname": "tpp1",
+	"projectname": "tpp-app",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
