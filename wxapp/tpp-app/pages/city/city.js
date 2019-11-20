@@ -1,37 +1,13 @@
-// pages/index/index.js
-const movieList = require('../../data/movieList.js')
+// pages/city/city.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      '../../images/zjz.jpg',
-      '../../images/tqzz.jpg',
-      '../../images/sndn.jpg',
-      '../../images/syr.jpg'
-    ],
-    now:true,
-    interval: 3000,
-    duration: 800,
-    movieList: movieList.movieList
+
   },
-  IsHit: function() {
-    this.setData({
-      now:true
-    })
-  },
-  upComing: function() {
-    this.setData({
-      now:false
-    })
-  },
-  city: function() {
-    wx.navigateTo({
-      url: "/pages/city/city"
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

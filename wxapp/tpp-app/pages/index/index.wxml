@@ -1,17 +1,17 @@
 <!--miniprogram/pages/index/index.wxml-->
 <view class="index">
   <view class="header">
-    <view class="header-left">
+    <view class="header-left" bindtap="city">
       <image class="tpp" src="../../images/tpp.png" />
       <text>南昌</text>
       <view class="triangle"></view>
     </view>
     <view class="header-right">
-      <span class="lsHit">正在热映</span>
-      <span class="upcoming">即将上映</span>
+      <span class="lsHit" bindtap="IsHit" style="color:{{now? '#ef4238' : '#666'}}">正在热映</span>
+      <span class="upcoming" bindtap="upComing" style="color:{{now? '#666' : '#ef4238'}}">即将上映</span>
     </view>
   </view>
-  <!-- <view class="isHotNow">
+  <view class="isHotNow" wx:if="{{now}}">
     <view class="slideShow">
       <swiper indicator-dots="true" autoplay="true" duration="{{duration}}" interval="{{interval}}" circular="true">
         <block wx:for="{{imgUrls}}" wx:key="{{index}}">
@@ -65,8 +65,8 @@
         <text class="preferential" wx:if="{{item.preferential}}">{{item.preferential}}</text>
       </view>
     </view>
-  </view> -->
-  <view class="upComingNow">
+  </view>
+  <view class="upComingNow" wx:else >
     <view class="will-coming">
       <view class="movie-lists" wx:for="{{movieList}}" wx:key="item">
         <view class="date">

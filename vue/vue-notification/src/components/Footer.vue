@@ -6,6 +6,7 @@
 
 <script>
 import {open} from './notifiation.js'
+// 默认导出
 export default {
   mounted () {
     setTimeout(() => {

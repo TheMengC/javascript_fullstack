@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/cinema/cinema",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/city/city"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

@@ -9,6 +9,7 @@ import Notification from './Notification.vue'
 const NotificationConstructor = vue.extend(Notification)
 
 let notification
+// 命名导出
 export const open = ({title, content}) => {
   if(notification) {
     notification.title = title
