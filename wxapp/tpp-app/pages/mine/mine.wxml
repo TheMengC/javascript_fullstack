@@ -1,2 +1,37 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="mine">
+  <view class="header">
+    <view class="login">
+      <view class="img">
+        <image src="../../images/login.png"/>
+      </view>
+      <span class="login-immediately">立即登录</span>
+    </view>
+  </view>
+  <view class="tab-list">
+    <ul>
+      <li>
+        <span class="tab">电影票</span>
+        <span class="describe">点击查看已购电影票</span>
+      </li>
+      <li>
+        <span class="tab">优惠卡</span>
+        <span class="describe">优惠券</span>
+      </li>
+      <li>
+        <span class="tab">权益卡</span>
+      </li>
+      <li>
+        <span class="tab">我的小食</span>
+      </li>
+      <li>
+        <span class="tab">想看的电影</span>
+      </li>
+      <li>
+        <span class="tab">看过的电影</span>
+      </li>
+      <li>
+        <span class="tab">我的小聚场</span>
+      </li>
+    </ul>
+  </view>
+</view>

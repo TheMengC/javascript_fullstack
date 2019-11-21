@@ -7,8 +7,9 @@
       <view class="triangle"></view>
     </view>
     <view class="header-right">
-      <span class="lsHit" bindtap="IsHit" style="color:{{now? '#ef4238' : '#666'}}">正在热映</span>
-      <span class="upcoming" bindtap="upComing" style="color:{{now? '#666' : '#ef4238'}}">即将上映</span>
+      <view class="lsHit" bindtap="IsHit" style="color:{{now? '#ef4238' : '#666'}}">正在热映</view>
+      <view class="upcoming" bindtap="upComing" style="color:{{now? '#666' : '#ef4238'}}">即将上映</view>
+      <view class="bottomLine" style="left:{{now? '13px' : '70px'}}"></view>
     </view>
   </view>
   <view class="isHotNow" wx:if="{{now}}">

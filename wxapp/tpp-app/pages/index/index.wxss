@@ -48,6 +48,18 @@
   margin-right: 40rpx;
   /* color: rgb(252, 82, 82); */
 }
+.upcoming{
+  display: inline-block;
+}
+.bottomLine {
+  width: 12px;
+  height: 1px;
+  background: #ef4238;
+  position: absolute;
+  bottom: 0;
+  transition: left .5s;
+  left: 13px;
+}
 swiper{
   margin-top: 45rpx;
   height: 260rpx;

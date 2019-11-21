@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/cinema/cinema",
     "pages/mine/mine",
+    "pages/cinema/cinema",
+    "pages/index/index",
     "pages/city/city"
   ],
   "window": {
