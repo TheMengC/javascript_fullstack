@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <div class="search-box-wrapper">
-      <v-search-box @query="onQueryChange"></v-search-box>
+      <v-search-box @query="onQueryChange" ref="searchBox"></v-search-box>
     </div>
     <!-- 热门搜索和搜索历史 -->
     <div class="shortcut-wrapper">
@@ -20,15 +20,19 @@
           <div class="search-history">
             <h1 class="title">
               <span class="text">搜索历史</span>
-              <span class="clear">
+              <span class="clear" @click="clearSearchHistory">
                 <i class="icon">&#xe612;</i>
               </span>
             </h1>
             <!-- 搜索历史列表 -->
-            <v-searchList :searches="searchHistory"></v-searchList>
+            <v-searchList :searches="searchHistory" @select="saveSearch" @delete="deleteSearchHistory"></v-searchList>
           </div>
         </div>
       </v-scroll>
+    </div>
+    <!-- 搜索结果 -->
+    <div class="search-result">
+      <v-suggest :query="query"></v-suggest>
     </div>
   </div>
 </template>
@@ -39,6 +43,8 @@ import searchBox from '@/components/searchBox'
 import scroll from '@/components/scroll'
 import searchList from '@/components/searchList'
 import api from '@/api'
+import {searchMixin} from '@/common/mixin'
+import suggest from '@/components/suggest'
 export default {
   data () {
     return {
@@ -49,17 +55,16 @@ export default {
   components: {
     'v-search-box': searchBox,
     'v-scroll': scroll,
-    'v-searchList': searchList
+    'v-searchList': searchList,
+    'v-suggest': suggest
   },
   computed: {
     ...mapGetters([
       'searchHistory'
     ])
   },
+  mixins: [searchMixin],
   methods: {
-    onQueryChange (e) {
-      console.log(e)
-    },
     _getHotKey () {
       api.HotSearchKey().then((res) => {
         console.log(res)
@@ -118,4 +123,9 @@ export default {
             .icon
               font-size 18px
               color hsla(0, 0%, 100%, 0.3)
+  .search-result
+    position fixed
+    width 100%
+    top px2rem(360px)
+    bottom 0
 </style>
