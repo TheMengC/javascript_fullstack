@@ -12,11 +12,17 @@ Page({
       '../../images/sndn.jpg',
       '../../images/syr.jpg'
     ],
+    city: '南昌',
     now:true,
     interval: 3000,
     duration: 800,
     movieList: movieList.movieList
   },
+  changeData(city) {
+    this.setData({
+        city: city
+    })
+ },
   IsHit: function() {
     this.setData({
       now:true
@@ -50,7 +56,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**

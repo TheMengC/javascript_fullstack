@@ -7,7 +7,7 @@
   margin-bottom: 40rpx;
 }
 .header-left{
-  width: 140rpx;
+  width: 300rpx;
   height: 120rpx;
   line-height: 140rpx;
   color: #b9b9b9;
@@ -35,7 +35,7 @@
   border-right: 5px solid transparent;
   border-top: 5px solid #000;
   float: left;
-  margin-left: 1px;
+  margin-left: 2px;
 }
 .header-right{
   position: absolute;

@@ -3,7 +3,7 @@
   <view class="header">
     <view class="header-left" bindtap="city">
       <image class="tpp" src="../../images/tpp.png" />
-      <text>南昌</text>
+      <text>{{city}}</text>
       <view class="triangle"></view>
     </view>
     <view class="header-right">
