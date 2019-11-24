@@ -1,2 +1,5 @@
-<!--pages/cinema/cinema.wxml-->
-<text>pages/cinema/cinema.wxml</text>
+<view class="creama">
+  <view class="top">
+    
+  </view>
+</view>

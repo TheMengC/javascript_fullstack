@@ -4,7 +4,7 @@
       <view class="img">
         <image src="../../images/login.png"/>
       </view>
-      <span class="login-immediately">立即登录</span>
+      <span class="login-immediately" open-type="getUserinfo">立即登录</span>
     </view>
   </view>
   <view class="tab-list">
