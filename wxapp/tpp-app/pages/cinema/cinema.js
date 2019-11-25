@@ -5,9 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    city: '南昌'
   },
-
+  //接收city信息
+  changeData(city) {
+    this.setData({
+        city: city
+    })
+  },
+  city: function() {
+    wx.navigateTo({
+      url: "/pages/city/city"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

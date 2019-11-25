@@ -164,6 +164,7 @@ Page({
             scrollTop: scrollTop
         })
     },
+    //向上一个页面抛出city信息
     bindCity: function(e) {
         var city = e.currentTarget.dataset.city;
         wx.navigateBack()

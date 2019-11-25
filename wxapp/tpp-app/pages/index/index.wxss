@@ -18,10 +18,11 @@
   align-items: center;
 }
 .tpp{
+  display: inline-block;
   width: 40rpx;
   height: 40rpx;
   margin-right: 10rpx;
-  float: left;
+  /* float: left; */
 }
 .header-left text{
   float: left;

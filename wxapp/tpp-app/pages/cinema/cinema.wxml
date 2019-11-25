@@ -1,5 +1,31 @@
 <view class="creama">
-  <view class="top">
-    
+  <view class="header">
+    <view class="header-left" bindtap="city">
+      <view class="image">
+        <image src="../../images/tpp.png" />
+      </view>
+      <span class="city">{{city}}</span>
+      <view class="triangle"></view>
+    </view>
+    <view class="middle">
+      <view class="choice">
+        <view class="area">
+          <text>区域</text>
+          <i class="icon"></i>
+        </view>
+        <view class="sort">
+          <text>综合排序</text>
+          <i class="icon"></i>
+        </view>
+        <view class="features">
+          <text>特色</text>
+          <i class="icon"></i>
+        </view>
+      </view>
+    </view>
+    <view class="right">
+      <image class="search" src="../../images/.png" />
+        
+    </view>
   </view>
 </view>

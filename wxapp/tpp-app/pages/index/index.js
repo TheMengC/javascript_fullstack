@@ -18,6 +18,7 @@ Page({
     duration: 800,
     movieList: movieList.movieList
   },
+  //接收city信息
   changeData(city) {
     this.setData({
         city: city
