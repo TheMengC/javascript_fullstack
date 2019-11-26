@@ -7,25 +7,43 @@
       <span class="city">{{city}}</span>
       <view class="triangle"></view>
     </view>
-    <view class="middle">
+    <view class="header-middle">
       <view class="choice">
         <view class="area">
           <text>区域</text>
-          <i class="icon"></i>
+          <view class="icon"></view>
         </view>
         <view class="sort">
           <text>综合排序</text>
-          <i class="icon"></i>
+          <view class="icon"></view>
         </view>
         <view class="features">
           <text>特色</text>
-          <i class="icon"></i>
+          <view class="icon"></view>
         </view>
       </view>
     </view>
-    <view class="right">
-      <image class="search" src="../../images/.png" />
-        
+    <view class="header-right">
+      <view class="search">
+        <image src="../../images/search.png" />
+      </view>
+    </view>
+  </view>
+  <view class="creama-list">
+    <view class="list-left">
+      <view class="creama-name">
+        <span class="name">完美世界影城乐买佳店(原17.5影城)</span>
+        <span class="creama-card">影城卡</span>
+      </view>
+      <view class="address">
+        <span>青山湖区经济开发区榴云路商业街B座乐买佳购物广场四楼</span>
+      </view>
+    </view>
+    <view class="list-right">
+      <view class="price">
+        <span>19.9元</span>起
+      </view>
+      <view class="away">2.8km</view>
     </view>
   </view>
 </view>
