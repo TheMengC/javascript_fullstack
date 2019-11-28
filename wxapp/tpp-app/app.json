@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/cinema/cinema",
     "pages/index/index",
+    "pages/cinema/cinema",
     "pages/city/city",
     "pages/mine/mine"
     
