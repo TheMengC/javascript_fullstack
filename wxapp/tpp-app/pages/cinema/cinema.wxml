@@ -29,21 +29,17 @@
       </view>
     </view>
   </view>
-  <view class="creama-list">
-    <view class="list-left">
-      <view class="creama-name">
-        <span class="name">完美世界影城乐买佳店(原17.5影城)</span>
-        <span class="creama-card">影城卡</span>
+    <view class="creama-list" wx:for="{{creamaList}}" wx:key="item">
+      <view class="list-top">
+          <span class="creama-name">{{item.name}}</span>
+          <view class="creama-card">影城卡</view>
+        <span class="creama-price">{{item.price}}</span>
+        <span class="creama-icon1">元</span>
+        <span class="creama-icon2">起</span>
       </view>
-      <view class="address">
-        <span>青山湖区经济开发区榴云路商业街B座乐买佳购物广场四楼</span>
+      <view class="list-bottom">
+        <span class="creama-address">{{item.address}}</span>
+        <span class="creama-away">{{item.away}}</span>
       </view>
     </view>
-    <view class="list-right">
-      <view class="price">
-        <span>19.9元</span>起
-      </view>
-      <view class="away">2.8km</view>
-    </view>
-  </view>
 </view>

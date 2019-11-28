@@ -2,6 +2,7 @@
 .header{
   width: 100%;
   height: 30px;
+  border-bottom: 1px solid #b3b1b1;
 }
 .header-left{
   float: left;
@@ -113,11 +114,71 @@
   height: 100%;
 }
 .creama-list{
-  width: 98%;
-  float: right;
-  height: 80px;
-}
-.list-left{
+  margin-left: 10px;
+  width: 100%;
   float: left;
+  height: 70px;
+  border-bottom: 1px solid #b3b1b1;
+}
+.list-top{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.creama-name{
+  font-size: 16px;
+  font-weight: 545;
+  max-width: 65%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* flex: ; */
+}
+.creama-card{
+  margin-left: 8px;
+  font-size: 12px;
+  display: inline-block;
+  background-color: #00AA00;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 3px;
+  color: #fff;
+}
+.creama-price{
+  margin-left: 12px;
+  font-size: 12px;
+  color: red;
+  font-weight: 200;
+}
+.creama-icon1{
+  font-size: 8px;
+  color: red;
+}
+.creama-icon2{
+  font-size: 8px;
+  color: #b9b9b9;
+}
+.list-bottom{
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+}
+.creama-address{
+  float: left;
+  font-size: 10px;
+  font-weight: 200;
   width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.creama-away{
+  margin-left: 14px;
+  font-size: 12px;
+  font-weight: 200;
+  color: #b9b9b9;
 }

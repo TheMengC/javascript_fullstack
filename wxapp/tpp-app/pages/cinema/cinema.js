@@ -1,11 +1,13 @@
 // pages/cinema/cinema.js
+const creamaList = require('../../data/creamaList.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    city: '南昌'
+    city: '南昌',
+    creamaList: creamaList.creama
   },
   //接收city信息
   changeData(city) {
