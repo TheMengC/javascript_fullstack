@@ -11,7 +11,7 @@ npm i nodemon -D
 
 数据库命令
 mysql -u root -p
-show database;
+show databases;
 create database ***;
 
 

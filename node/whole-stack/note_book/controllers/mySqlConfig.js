@@ -37,7 +37,7 @@ let allServices = {
 // 读取所有 users 表数据, 测试数据连接
 let getAllusers = function () {
   let _sql = `select * from users;`
-  return allServices.query(sql)
+  return allServices.query(_sql)
 }
 
 module.exports = {
