@@ -1,0 +1,26 @@
+<view class="movie">
+  <view class="movie-name">
+    <span class="name">少年的你</span>
+  </view>
+  <view class="movie-item">
+    <view class="movie-header">
+      <view class="image">
+        <image src="https://gw.alicdn.com/i2/TB1VyjPjYY1gK0jSZTEXXXDQVXa_.jpg_160x160Q30s100"/>  
+      </view>
+      <view class="movie-information">
+        <view class="movie-type">
+          <span class="type">爱情 / 剧情 / 中国大陆 / 135分钟</span>
+        </view>
+        <view class="movie-release">
+          <span class="date">2019-10-25 09:00 中国大陆上映</span>
+          <span class="time"></span>
+          <span class="movie-where"></span>
+        </view>
+        <view class="movie-watch">
+          <span class="how-many">213.2万人想看 / 大V推荐度 98%</span>
+          <image class="xinlang" src="../../images/新浪.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

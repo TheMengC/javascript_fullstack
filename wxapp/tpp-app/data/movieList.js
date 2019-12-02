@@ -1,6 +1,7 @@
 module.exports = {
   movieList: [
     {
+      id: 1,
       jiD:"2",
       where:"中国巨幕",
       name: "少年的你",
@@ -11,6 +12,7 @@ module.exports = {
       isHot:"一周最热"
     },
     {
+      id: 2,
       jiD:"2",
       where:"中国巨幕",
       name: "决战中途岛",
@@ -22,6 +24,7 @@ module.exports = {
       isHot:"今日最热"
     },
     {
+      id: 3,
       name: "受益人",
       imgUrl: "https://gw.alicdn.com/i3/TB1rgIzkKL2gK0jSZFmXXc7iXXa_.jpg_160x160Q30s100",
       actor: "大鹏 柳岩 张子贤",
@@ -31,6 +34,7 @@ module.exports = {
       preferential: "特惠"
     },
     {
+      id: 4,
       jiD:"2",
       where:"IMAX",
       name: "天气之子",
@@ -41,6 +45,7 @@ module.exports = {
       way: "购票"
     },
     {
+      id: 5,
       jiD:"2",
       where:"中国巨幕",
       name: "霹雳娃娃",
@@ -51,6 +56,7 @@ module.exports = {
       way: "预售"
     },
     {
+      id: 6,
       jiD:"2",
       where:"中国巨幕",
       name: "大约在冬季",
@@ -60,6 +66,7 @@ module.exports = {
       way: "预售"
     },
     {
+      id: 7,
       name: "海上钢琴师",
       imgUrl: "https://gw.alicdn.com/i2/TB1MHmhl7L0gK0jSZFtXXXQCXXa_.jpg_160x160Q30s100",
       actor: "蒂姆·罗斯 比尔·努恩",
@@ -69,6 +76,7 @@ module.exports = {
       preferential: "特惠"
     },
     {
+      id: 8,
       jiD:"3",
       where:"中国巨幕",
       name: "他们已不再变老",
@@ -78,6 +86,7 @@ module.exports = {
       way: "购票"
     },
     {
+      id: 9,
       name: "我的拳王男友",
       imgUrl: "https://gw.alicdn.com/i2/TB1W31xlVP7gK0jSZFjXXc5aXXa_.jpg_160x160Q30s100",
       actor: "向佐 王可如 邵兵 斌子",
@@ -85,6 +94,7 @@ module.exports = {
       way: "购票"
     },
     {
+      id: 10,
       jiD:"2",
       where:"中国巨幕",
       name: "中国机长",
