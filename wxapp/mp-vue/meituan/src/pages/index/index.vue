@@ -94,7 +94,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container{width:100%;height:100vh;background:#e8e8e8;}
 .search{background: #f5f5f5;border-radius: 12px;padding: 5px 10px}
 .swiper{height: 120px;width: 100%;}
