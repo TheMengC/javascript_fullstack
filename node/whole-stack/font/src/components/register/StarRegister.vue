@@ -29,7 +29,7 @@ export default {
       userpwd: ""
     }
   },
-  method: {
+  methods: {
     register() {
       if(this.nickname.trim() === '' || this.username.trim() === '' || this.userpwd.trim() === '') {
         this.$toast('昵称、账号或密码不能为空')
@@ -44,8 +44,16 @@ export default {
         }
       })
       .then(res => {
-        
+        console.log(res)
+        if (res.data.code === '200') {
+          this.$router.push({path: '/StarLogin'})
+        } else {
+          this.$toast(res.data.mess)
+        }
       })
+    },
+    login() {
+      this.$router.push({path: '/StarLogin'})
     }
   }
 }
