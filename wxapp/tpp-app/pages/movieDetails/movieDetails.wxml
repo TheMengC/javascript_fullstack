@@ -24,7 +24,15 @@
         </view>
       </view>
       <view class="movie-evaluation">
-        
+        <view class="evalution-left">
+          <view class="score-star">
+            <span class="scroe">8.3</span>
+            <image class="star" src="../../images/star-light.png" />
+          </view>
+          <view class="star-list">
+            
+          </view>
+        </view>
       </view>
     </view>
 </view>
