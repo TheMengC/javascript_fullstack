@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Person() {
+      this.age = 30
+    }
+
+    Person.prototype.say = function() {}
+
+    var p = new Person()
+    console.log(p)
+    // console.log(p.__proto__ === Person.prototype)
+    // console.log(Person.prototype.constructor === Person)
+
+    function Student() {
+
+    }
+    // 继承的方法
+    // 1.
+    // Student.prototype.__proto__ = Person.prototype
+    Student.prototype = new Person()
+
+    // 2.Object.create
+    function myCreate(obj) {
+      var F = function() {}
+      F.prototype = obj
+      return new F()
+    }
+    Student.prototype = Object.myCreate(Person.prototype)
+    var s = new Student()
+    console.log(s)
+
+
+    // 3.es6 extends 使用方法
+    function Student1() {
+      // 继承属性
+      Person.call(this)
+    }
+    // 继承方法
+    Student1.prototype = myCreate(Person.prototype)
+    // 修正 constructor
+    Student1.prototype.constructor = Student1
+
+
+    //this
+    function addProps() {
+      this.abcd = 40
+    }
+    var obj = {}
+    addProps.call(obj)
+  </script>
+</body>
+</html>
