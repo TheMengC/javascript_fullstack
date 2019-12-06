@@ -1,5 +1,11 @@
-function fn(name, age, id) {
-  console.log(arguments)
-  console.log(arguments.length)
+var arrayObject = {
+  0: 'name',
+  1: 'age',
+  2: 'id',
+  length: 3
 }
-fn('name', 'age', 'id')
+let arr = []
+for(let item of arrayObject) {
+  arr.push(item)
+}
+console.log(arr)
