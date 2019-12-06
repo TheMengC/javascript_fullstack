@@ -25,12 +25,27 @@
       </view>
       <view class="movie-evaluation">
         <view class="evalution-left">
-          <view class="score-star">
-            <span class="scroe">8.3</span>
-            <image class="star" src="../../images/star-light.png" />
+          <view class="grade-star">
+            <view class="grade">
+              <span>9.2</span>
+            </view>
+            <view class="star-list">
+              <image class="star" src="../../images/star-light.png" />
+              <image class="star" src="../../images/star-light.png" />
+              <image class="star" src="../../images/star-light.png" />
+              <image class="star" src="../../images/star-light.png" />
+              <image class="star" src="../../images/star-half.png" />
+            </view>
           </view>
-          <view class="star-list">
-            
+          <view class="tpp-score">
+            <span class="score">淘票票评分</span>
+            <span class="people">12.0万人评</span>
+            <view class="triangle"></view>
+          </view>
+        </view>
+        <view class="evalution-right">
+          <view class="star-from">
+            sdfhsk
           </view>
         </view>
       </view>
