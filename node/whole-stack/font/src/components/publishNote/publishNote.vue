@@ -9,7 +9,7 @@
       <div class="note-title">
         <h2>上传图片</h2>
         <van-uploader :after-read="onRead" accept="image/*.*" >
-          <van-icon class="photogragh"></van-icon>
+          <van-icon name="photograph"></van-icon>
           <span style="font-size:15px;color:red;margin-left:15px;">图片规格750*750*</span>
         </van-uploader>
         <img class="preImg" :src="preImg" alt="" v-if="preImg"/>
@@ -19,7 +19,7 @@
         <span class="note-type" @click="selectType">选择分类：&gt;{{selectCon}}</span>
         <van-action-sheet v-model="show" :actions="actions" @select="onSelect" cancel-text="取消" @cancel="onCancel" />
       </div>
-      <div class="publish-btn">发布笔记</div>
+      <div class="publish-btn" @click="publish">发布笔记</div>
     </div>
   </div>
 </template>
@@ -95,8 +95,9 @@ export default {
     onEditorChange() {
 
     },
-    onRead() {
-
+    onRead(file) {
+      // console.log(file)
+      this.preImg = file.content
     },
     onSelect(item) {
       // console.log(item)
@@ -108,6 +109,29 @@ export default {
     },
     selectType() {
       this.show = true
+    },
+    publish() {
+      let curUserId  = JSON.parse(sessionStorage.getItem('userInfo')).id
+      let curNickname = JSON.parse(sessionStorage.getItem('userInfo')).nickname
+      this.$http({
+        method: 'post',
+        url: 'http://localhost:3000/users/insertNote',
+        data: {
+          note_content: this.content,
+          head_img: this.preImg,
+          title: this.title,
+          note_type: this.selectCon,
+          useId: curUserId,
+          nickname: curNickname
+        }
+      })
+      .then((res) => {
+        console.log(res)
+        this.$toast(res.data.mess)
+        setTimeout(()=> {
+          this.$router.push({path: '/noteClass'})
+        },1000)
+      })
     }
   }
 }
