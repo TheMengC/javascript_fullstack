@@ -8,6 +8,7 @@
 <script>
 export default {
   name: 'App',
+  // provide 提供的数据不能在子组件中进行更改
   provide() {
     return {
       app: this

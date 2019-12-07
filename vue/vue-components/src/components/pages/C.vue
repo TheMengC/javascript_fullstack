@@ -1,10 +1,17 @@
 <template>
-  <div class="c-test">Age:{{app.userInfo.age}}</div>
+  <div class="c-test">Age:{{app.userInfo.age}}
+    <!-- <button @click="changApp">change</button> -->
+  </div>
 </template>
 
 <script>
 export default {
-inject: ['app']
+inject: ['app'],
+methods:{
+  // changApp() {
+  //   app.userInfo.age = 16
+  // }
+}
 }
 </script>
 
