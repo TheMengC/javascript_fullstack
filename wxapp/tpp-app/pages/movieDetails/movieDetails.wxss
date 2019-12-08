@@ -3,32 +3,33 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(196, 196, 196);
+  background-color: #F0F0F0;
   z-index: -3;
 }
 .bgc{
   position: absolute;
   top: 0;
   width: 100%;
-  height: 300px;
+  height: 500rpx;
   background-color: rgb(88, 88, 88);
   z-index: -2;
 }
 .movie-name{
   position: absolute;
-  left: 110px;
-  top: 62px;
+  left: 260rpx;
+  top: 150rpx;
 }
 .name{
   color: #fff;
-  font-size: 20px;
+  font-size: 46rpx;
+  font-weight: 400;
 }
 .image{
   position: absolute;
-  width: 80px;
-  height: 110px;
-  top: 60px;
-  left: 20px;
+  width: 170rpx;
+  height: 230rpx;
+  top: 150rpx;
+  left: 40rpx;
 }
 .image image{
   width: 100%;
@@ -36,18 +37,18 @@
 }
 .movie-header{
   position: absolute;
-  top: 100px;
+  top: 240rpx;
   width: 100%;
-  height: 300px;
+  height: 450rpx;
   background-color: #fff;
   z-index: -1;
   border-radius: 10px 10px 0 0;
 }
 .movie-information{
   position: absolute;
-  left: 110px;
+  left: 260rpx;
   top: 10px;
-  font-size: 12px;
+  font-size: 28rpx;
   color: #666666;
 }
 .how-many{
@@ -61,9 +62,9 @@
 .movie-evaluation{
   position: absolute;
   width: 100%;
-  height: 80px;
-  top: 90px;
-  left: 20px;
+  height: 160px;
+  top: 160rpx;
+  left: 40rpx;
   /* right: 20px; */
   display: flex;
 }
@@ -75,36 +76,199 @@
   left: 0;
   top: 0;
   width: 50%;
-  height: 60px;
-  line-height: 60px;
+  height: 120rpx;
+  line-height: 120rpx;
 }
 .grade{
   position: absolute;
   left: 0;
   top: 0;
-  height: 60px;
-  line-height: 60px;
-  font-size: 30px;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 74rpx;
 }
 .star-list{
   position: absolute;
-  left: 46px;
+  left: 110rpx;
 }
 .star{
-  width: 15px;
-  height: 15px;
+  width: 35rpx;
+  height: 35rpx;
 }
 .tpp-score{
   position: absolute;
   left: 0;
-  top: 60px;
-  height: 20px;
+  top: 110rpx;
+  height: 50rpx;
   width: 50%;
+}
+.score{
+  font-size: 32rpx;
+}
+.people{
+  font-size: 28rpx;
+  color: #ccc;
+}
+.people:hover{
+  width: 0;
+  height: 0;
+  border-top: 10rpx solid transparent;
+  border-bottom: 10rpx solid transparent;
+  border-left: 10rpx solid #bbb;
 }
 .evalution-right{
   flex: 1;
 }
-
-
-
-
+.star-from{
+  position: absolute;
+  width: 100%;
+  height: 150rpx;
+}
+.star-black-item{
+  position: absolute;
+  width: 100%;
+  height: 30rpx;
+}
+.star-black{
+  position: absolute;
+  width: 100rpx;
+  height: 30rpx;
+}
+.star1{
+  position: absolute;
+  top: 0;
+  width: 20rpx;
+  height: 20rpx;
+}
+.item{
+  position: absolute;
+  left: 120rpx;
+  width: 200rpx;
+  height: 30rpx;
+}
+.star-item{
+  position: absolute;
+  top: 8rpx;
+  width: 180rpx;
+  height: 8rpx;
+  background-color: #bbb;
+}
+.star-item-level{
+  position: absolute;
+  height: 8rpx;
+  width: 90rpx;
+  background-color: #000;
+}
+.button{
+  position: absolute;
+  left: 40rpx;
+  top: 320rpx;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+}
+.button1{
+  flex: 1;
+}
+.button1-click{
+  position: absolute;
+  top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 300rpx;
+  background-color: #F0F0F0;
+  border-radius: 40px;
+}
+.love-watch{
+  position: absolute;
+  left: 80rpx;
+  top: 25rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.watch-want{
+  position: absolute;
+  left: 130rpx;
+  /* top: 12rpx; */
+  font-size: 34rpx;
+}
+.choose{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 46rpx;
+  font-weight: 400;
+  color: #fff;
+  background-color: #FF0099;
+}
+.movie-detail{
+  position: absolute;
+  width: 100%;
+  height: 1000rpx;
+  top: 700rpx;
+  background-color: #fff;
+}
+.introduce-list{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  display: flex;
+}
+.introduce{
+  flex: 1;
+}
+.strong{
+  font-weight: 600;
+}
+.underLine{
+  position: absolute;
+  width: 40rpx;
+  height: 8rpx;
+  bottom: 0;
+  left: 100rpx;
+  background-color: #000;
+}
+.introduce-people{
+  position: absolute;
+  top: -8rpx;
+  font-size: 24rpx;
+  color: #bbb;
+}
+.text{
+  position: absolute;
+  box-sizing: border-box;
+  top: 120rpx;
+  width: 100%;
+  height: 650rpx;
+}
+.text-show{
+  box-sizing: border-box;
+  position: absolute;
+  height: 170rpx;
+  overflow: hidden;
+  left: 40rpx;
+  right: 40rpx;
+  text-align: justify;
+}
+.text-show::after{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90rpx;
+  content: '展开';
+  font-size: 36rpx;
+  color: #1394f3;
+  text-align: right;
+  background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff,#fff,#fff);
+}
+.movie-introduce{
+  /* width: 100%; */
+  font-size: 36rpx;
+  line-height: 60rpx;
+}
