@@ -5,9 +5,50 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    show: true,
+    actor:[
+      {
+        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
+        name: '张涵予',
+        work: '饰 刘长健'
+      },
+      {
+        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
+        name: '张涵予',
+        work: '饰 刘长健'
+      },
+      {
+        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
+        name: '张涵予',
+        work: '饰 刘长健'
+      },
+      {
+        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
+        name: '张涵予',
+        work: '饰 刘长健'
+      },
+      {
+        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
+        name: '张涵予',
+        work: '饰 刘长健'
+      },
+      {
+        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
+        name: '张涵予',
+        work: '饰 刘长健'
+      },
+      {
+        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
+        name: '张涵予',
+        work: '饰 刘长健'
+      },
+    ]
   },
-
+  textOpen: function() {
+    this.setData({
+      show: false
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
