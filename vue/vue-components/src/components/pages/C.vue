@@ -6,12 +6,12 @@
 
 <script>
 export default {
-inject: ['app'],
-methods:{
-  // changApp() {
-  //   app.userInfo.age = 16
-  // }
-}
+  inject: ['app'],
+  methods:{
+    // changApp() {
+    //   app.userInfo.age = 16
+    // }
+  }
 }
 </script>
 
