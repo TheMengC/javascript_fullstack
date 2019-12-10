@@ -1,25 +1,25 @@
 <view class="movie">
     <view class="image">
-      <image src="https://gw.alicdn.com/i2/TB1VyjPjYY1gK0jSZTEXXXDQVXa_.jpg_160x160Q30s100"/>  
+      <image src="{{movieDetails.details.img}}"/>  
     </view>
-    <view class="bgc">
+    <view class="bgc" style="background-color: {{movieDetails.details.bgc}};">
       <view class="movie-name">
-        <span class="name">少年的你</span>
+        <span class="name">{{movieDetails.details.name}}</span>
       </view>
     </view>
     <view class="movie-header">
       <view class="movie-information">
         <view class="movie-type">
-          <span class="type">爱情 / 剧情 / 中国大陆 / 135分钟</span>
+          <span class="type">{{movieDetails.details.type}}</span>
         </view>
         <view class="movie-release">
-          <span class="date">2019-10-25 09:00 中国大陆上映</span>
+          <span class="date">{{movieDetails.details.date}}</span>
           <span class="time"></span>
           <span class="movie-where"></span>
         </view>
         <view class="movie-watch">
-          <span class="how-many">213.2万人想看</span>
-          <span class="support"> / 大V推荐度 98%</span>
+          <span class="how-many">{{movieDetails.details.people}}</span>
+          <span class="support">{{movieDetails.details.support}}</span>
           <image class="xinlang" src="../../images/新浪.png" />
         </view>
       </view>
@@ -27,7 +27,7 @@
         <view class="evalution-left">
           <view class="grade-star">
             <view class="grade">
-              <span>9.2</span>
+              <span>{{movieDetails.details.grades}}</span>
             </view>
             <view class="star-list">
               <image class="star" src="../../images/star-light.png" />
@@ -39,7 +39,7 @@
           </view>
           <view class="tpp-score">
             <span class="score">淘票票评分</span>
-            <span class="people">12.0万人评</span>
+            <span class="people">{{movieDetails.details.evaluate}}</span>
             <!-- <view class="triangle"></view> -->
           </view>
         </view>
@@ -125,14 +125,14 @@
       </view>
       <view class="button">
           <view class="button1">
-            <view class="button1-click">
+            <view class="button1-click" wx:if="{{love}}" bind:tap="wantWatch">
               <image class="love-watch" src="../../images/love-watch.png"></image>
               <span class="watch-want">想看</span>
             </view>
-            <!-- <view class="button1-click" style="background-color: #FFFF99;  border: 1px solid #FFCC00;">
+            <view class="button2-click" wx:else  bind:tap="neverWatch">
               <image class="love-watch" src="../../images/love-watch-ok.png"></image>
               <span class="watch-want">已想看</span>
-            </view> -->
+            </view>
           </view>
           <view class="button1">
             <view class="button1-click">
@@ -156,12 +156,11 @@
           <span>更多</span>
         </view>
       </view>
-      <view class="{{show ? 'text' : 'text text-display'}}" bindtap="textOpen">
-        <view class="{{show ? 'text-show' : 'text-show text-display'}}"  >
-          <p class="movie-introduce">
-            一场高考前夕的校园意外，改变了两个少年的命运。陈念性格内向，是学校里的优等生，努力复习、考上好大学是高三的她唯一的念头。同班同学的意外坠楼牵扯出一连串不为人知的故事，陈念也被一点点卷入其中…在她最孤独的时刻，一个叫“小北”的少年闯入了她的世界… 大多数人的18岁都是明媚、快乐的，而他们却在18岁这个夏天提前尝到了成人世界的漠然。一场秘而不宣的“战斗”正在上演，他们将一起守护少年的尊严。
-          </p>
-          <p class="open">展开</p>
+      <view class="text" style="height:{{show ? '170rpx' : '650rpx'}}">
+        <view class="text-show" style="height:{{show ? '170rpx' : '650rpx'}}">
+          <p class="movie-introduce">{{movieDetails.details.introduce}}</p>
+          <p class="open" wx:if="{{show}}" bindtap="textOpen">展开</p>
+          <p class="open" wx:else bindtap="textClose">收起</p>
         </view>
       </view>
       <view class="actor">
@@ -170,7 +169,7 @@
         </view>
         <view class="actor-list">
           <scroll-view class="movie-actor" scroll-x="true" >
-            <view class="actor-show" wx:for="{{actor}}" wx:key="item">
+            <view class="actor-show" wx:for="{{movieDetails.details.actorImg}}" wx:key="item">
               <image class="actor-img" src="{{item.img}}"></image>
               <view class="actor-name">{{item.name}}</view>
               <view class="actor-work">{{item.work}}</view>

@@ -39,6 +39,13 @@ Page({
       url: "/pages/city/city"
     })
   },
+  movieDetail: function(event) {
+    const id = event.currentTarget.dataset.id
+    console.log(id)
+    wx.navigateTo({
+      url: '/pages/movieDetails/movieDetails?id=' + id
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

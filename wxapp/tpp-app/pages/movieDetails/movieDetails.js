@@ -1,59 +1,56 @@
 // pages/movieDetails/movieDetails.js
+const movie= require('../../data/movieList.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    id: null,
+    love:true,
     show: true,
-    actor:[
-      {
-        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
-        name: '张涵予',
-        work: '饰 刘长健'
-      },
-      {
-        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
-        name: '张涵予',
-        work: '饰 刘长健'
-      },
-      {
-        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
-        name: '张涵予',
-        work: '饰 刘长健'
-      },
-      {
-        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
-        name: '张涵予',
-        work: '饰 刘长健'
-      },
-      {
-        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
-        name: '张涵予',
-        work: '饰 刘长健'
-      },
-      {
-        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
-        name: '张涵予',
-        work: '饰 刘长健'
-      },
-      {
-        img: 'http://gw.alicdn.com/i4/TB1etPfXeuSBuNjSsziXXbq8pXa_.jpg_320x320Q30.jpg_.webp',
-        name: '张涵予',
-        work: '饰 刘长健'
-      },
-    ]
+    movieDetails: {}
   },
   textOpen: function() {
     this.setData({
       show: false
     })
   },
+  textClose: function() {
+    this.setData({
+      show: false
+    })
+  },
+  wantWatch: function() {
+    this.setData({
+      love : false
+    })
+  },
+  neverWatch: function() {
+    this.setData({
+      love : true
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const id = Number(options.id);
+    this.setData({
+      id
+    })
+    let movieDetails = movie.movieList.forEach((item) => {
+      // console.log(item)
+      if (item.id == id) {
+        this.setData({
+          movieDetails: item
+        })
+      }
+    })
+    console.log(movieDetails)
+    // this.setData({
+    //   movieDetails: movieDetails
+    // })
   },
 
   /**
