@@ -1,11 +1,11 @@
 /* pages/movieDetails/movieDetails.wxss */
-.movie{
+/* .movie{
   position: relative;
   width: 100%;
   min-height: 100vh;
   background-color: #F0F0F0;
   z-index: -3;
-}
+} */
 .bgc{
   position: absolute;
   top: 0;
@@ -30,6 +30,7 @@
   height: 230rpx;
   top: 150rpx;
   left: 40rpx;
+  z-index: 5;
 }
 .image image{
   width: 100%;
@@ -41,7 +42,7 @@
   width: 100%;
   height: 450rpx;
   background-color: #fff;
-  z-index: -1;
+  z-index: 1;
   border-radius: 10px 10px 0 0;
 }
 .movie-information{
@@ -213,6 +214,13 @@
   font-weight: 400;
   color: #fff;
   background-color: #FF0099;
+}
+.box{
+  position: absolute;
+  top: 690rpx;
+  width: 100%;
+  height: 10rpx;
+  background-color: #F0F0F0;
 }
 .movie-detail{
   position: absolute;

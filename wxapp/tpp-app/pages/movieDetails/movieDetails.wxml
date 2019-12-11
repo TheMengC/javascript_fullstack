@@ -125,11 +125,11 @@
       </view>
       <view class="button">
           <view class="button1">
-            <view class="button1-click" wx:if="{{love}}" bind:tap="wantWatch">
+            <view class="button1-click" wx:if="{{love}}" bindtap="wantWatch">
               <image class="love-watch" src="../../images/love-watch.png"></image>
               <span class="watch-want">想看</span>
             </view>
-            <view class="button2-click" wx:else  bind:tap="neverWatch">
+            <view class="button2-click" wx:else  bindtap="neverWatch">
               <image class="love-watch" src="../../images/love-watch-ok.png"></image>
               <span class="watch-want">已想看</span>
             </view>
@@ -142,6 +142,7 @@
           </view>
         </view>
     </view>
+    <view class="box"></view>
     <view class="movie-detail">
       <view class="introduce-list">
         <view class="underLine"></view>
@@ -156,8 +157,8 @@
           <span>更多</span>
         </view>
       </view>
-      <view class="text" style="height:{{show ? '170rpx' : '650rpx'}}">
-        <view class="text-show" style="height:{{show ? '170rpx' : '650rpx'}}">
+      <view class="text" style="height:{{show ? '170rpx' : movieDetails.details.maxHeight}}">
+        <view class="text-show" style="height:{{show ? '170rpx' : movieDetails.details.maxHeight}}">
           <p class="movie-introduce">{{movieDetails.details.introduce}}</p>
           <p class="open" wx:if="{{show}}" bindtap="textOpen">展开</p>
           <p class="open" wx:else bindtap="textClose">收起</p>

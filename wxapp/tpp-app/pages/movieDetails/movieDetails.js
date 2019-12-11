@@ -18,10 +18,11 @@ Page({
   },
   textClose: function() {
     this.setData({
-      show: false
+      show: true
     })
   },
-  wantWatch: function() {
+  wantWatch () {
+    console.log('ok')
     this.setData({
       love : false
     })
@@ -57,7 +58,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**

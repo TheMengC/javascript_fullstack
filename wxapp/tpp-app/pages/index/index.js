@@ -41,7 +41,12 @@ Page({
   },
   movieDetail: function(event) {
     const id = event.currentTarget.dataset.id
-    console.log(id)
+    // console.log(id)
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 500
+    })
     wx.navigateTo({
       url: '/pages/movieDetails/movieDetails?id=' + id
     })

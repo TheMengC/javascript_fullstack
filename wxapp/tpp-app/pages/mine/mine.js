@@ -1,11 +1,50 @@
-// pages/mine/mine.js
+var app = getApp
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
   data: {
+    //用户个人信息
+    userInfo:{
+      avatarUrl:"../../images/login.png",//用户头像
+      nickName:"立即登录",//用户昵称
+    }
+  },
+  /**
+   *点击添加地址事件
+   */
+  add_address_fun:function(){
+    wx.navigateTo({
+      url: 'add_address/add_address',
+    })
+  },
+  login () {
+    var that=this;
+    /**
+     * 获取用户信息
+     */
+    wx.getUserInfo({
+      success:function(res){
+        // console.log(res);
+        wx.showToast({
+          title: '登录中',
+          icon: 'loading',
+          duration: 1000,
+          success:function () {
+            setTimeout(() => {
+              var avatarUrl = 'userInfo.avatarUrl';
+              var nickName = 'userInfo.nickName';
+              that.setData({
+                [avatarUrl]: res.userInfo.avatarUrl,
+                [nickName]:res.userInfo.nickName,
+              })
+            }, 1000)
 
+          }
+        })
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -13,10 +52,6 @@ Page({
   onLoad: function (options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
 
   },
