@@ -7,7 +7,7 @@ Page({
    */
   data: {
     id: null,
-    love:true,
+    love: true,
     show: true,
     movieDetails: {},
     width1: '',
