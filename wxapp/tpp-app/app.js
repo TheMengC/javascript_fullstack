@@ -1,6 +1,11 @@
 //app.js
 App({
   onLaunch: function () {
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 1000
+    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

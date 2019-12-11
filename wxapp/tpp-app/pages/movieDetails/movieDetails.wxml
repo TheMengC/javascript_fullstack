@@ -55,7 +55,7 @@
               </view>
               <view class="item">
                 <view class="star-item">
-                  <view class="star-item-level">
+                  <view class="star-item-level" style="width:{{width1}}rpx">
                   </view>
                 </view>
               </view>
@@ -70,7 +70,7 @@
               </view>
               <view class="item">
                 <view class="star-item">
-                  <view class="star-item-level">
+                  <view class="star-item-level" style="width:{{width2}}rpx">
                   </view>
                 </view>
               </view>
@@ -85,7 +85,7 @@
               </view>
               <view class="item">
                 <view class="star-item">
-                  <view class="star-item-level">
+                  <view class="star-item-level" style="width:{{width3}}rpx">
                   </view>
                 </view>
               </view>
@@ -100,7 +100,7 @@
               </view>
               <view class="item">
                 <view class="star-item">
-                  <view class="star-item-level">
+                  <view class="star-item-level" style="width:{{width4}}rpx">
                   </view>
                 </view>
               </view>
@@ -115,7 +115,7 @@
               </view>
               <view class="item">
                 <view class="star-item">
-                  <view class="star-item-level">
+                  <view class="star-item-level" style="width:{{width5}}rpx">
                   </view>
                 </view>
               </view>

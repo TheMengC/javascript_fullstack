@@ -156,8 +156,9 @@
 }
 .star-item-level{
   position: absolute;
+  left: 0;
   height: 8rpx;
-  width: 90rpx;
+  /* width: 90rpx; */
   background-color: #000;
 }
 .button{

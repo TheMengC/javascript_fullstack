@@ -45,7 +45,7 @@ Page({
     wx.showToast({
       title: '加载中',
       icon: 'loading',
-      duration: 500
+      duration: 1000
     })
     wx.navigateTo({
       url: '/pages/movieDetails/movieDetails?id=' + id

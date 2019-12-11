@@ -9,7 +9,12 @@ Page({
     id: null,
     love:true,
     show: true,
-    movieDetails: {}
+    movieDetails: {},
+    width1: '',
+    width2: '',
+    width3: '',
+    width4: '',
+    width5: ''
   },
   textOpen: function() {
     this.setData({
@@ -22,7 +27,6 @@ Page({
     })
   },
   wantWatch () {
-    console.log('ok')
     this.setData({
       love : false
     })
@@ -48,10 +52,20 @@ Page({
         })
       }
     })
-    console.log(movieDetails)
-    // this.setData({
-    //   movieDetails: movieDetails
-    // })
+    let width1 = Math.random() * 180
+    let width2 = Math.random() * 180
+    let width3 = Math.random() * 180
+    let width4 = Math.random() * 180
+    let width5 = Math.random() * 180
+
+    this.setData({
+      width1: width1,
+      width2: width2,
+      width3: width3,
+      width4: width4,
+      width5: width5,
+
+    })
   },
 
   /**
