@@ -1,16 +1,18 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1>
     <i-button size="large" slot="icon" @on-click="btn1">
       <i slot="icon">*</i>
       按钮
     </i-button>
-    <i-button size="small" @on-click="btn2">提交</i-button>
+    <i-button size="small" @on-click="btn2">提交</i-button> -->
     <!-- <div @click="oSure">
       <i-button size="large" ref="sure" >确认</i-button>
     </div> -->
-    <i-button size="large" ref="sure" @click.native="oSure" @message="getMessage">确认</i-button>
-    <h1>{{mess}}</h1>
+    <!-- <i-button size="large" ref="sure" @click.native="oSure" @message="getMessage">确认</i-button>
+    <h1>{{mess}}</h1> -->
+
+    <div class="button" @click="showToast">fire</div>
   </div>
 </template>
 
@@ -39,6 +41,9 @@ export default {
     },
     getMessage(e) {
       this.mess = e
+    },
+    showToast() {
+      this.$toast('网络异常',{})
     }
   }
 }
