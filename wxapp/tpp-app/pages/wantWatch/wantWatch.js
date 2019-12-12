@@ -1,42 +1,34 @@
-// pages/index/index.js
+// pages/wantWatch/wantWatch.js
 const movieList = require('../../data/movieList.js')
+let app =  getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      '../../images/zjz.jpg',
-      '../../images/tqzz.jpg',
-      '../../images/sndn.jpg',
-      '../../images/syr.jpg'
-    ],
-    city: '南昌',
-    now:true,
-    interval: 3000,
-    duration: 800,
-    movieList: movieList.movieList
+    movie: [],
+    sum: ''
   },
-  //接收city信息
-  changeData(city) {
-    this.setData({
-        city: city
-    })
- },
-  IsHit: function() {
-    this.setData({
-      now:true
-    })
-  },
-  upComing: function() {
-    this.setData({
-      now:false
-    })
-  },
-  city: function() {
-    wx.navigateTo({
-      url: "/pages/city/city"
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    let mv = []
+    app.globalData.movieList.map((item) => {
+      movieList.movieList.map((index) => {
+        if(item == index.id) {
+          mv.push(index)
+          this.setData({
+            movie: mv
+          })
+          console.log(this.data.movie)
+          this.setData({
+            sum:app.globalData.movieList.length
+          })
+        }
+      })
     })
   },
   movieDetail: function(event) {
@@ -52,13 +44,6 @@ Page({
     })
   },
   /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
-  },
-
-  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
@@ -69,6 +54,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
   },
 
   /**

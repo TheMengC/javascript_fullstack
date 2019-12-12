@@ -1,12 +1,13 @@
 // pages/movieDetails/movieDetails.js
 const movie= require('../../data/movieList.js')
+let app =  getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    id: null,
+    idNum: null,
     love: true,
     show: true,
     movieDetails: {},
@@ -26,23 +27,21 @@ Page({
       show: true
     })
   },
-  wantWatch () {
-    this.setData({
-      love : false
-    })
-  },
-  neverWatch: function() {
-    this.setData({
-      love : true
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     const id = Number(options.id);
+    app.globalData.movieList.map((item) => {
+      if(item == id) {
+        this.setData({
+          love: false
+        })
+      }
+    })
+    // console.log(id)
     this.setData({
-      id
+      idNum: id
     })
     let movieDetails = movie.movieList.forEach((item) => {
       // console.log(item)
@@ -67,7 +66,20 @@ Page({
 
     })
   },
-
+  wantWatch () {
+    this.setData({
+      love : false
+    })
+    app.globalData.movieList.push(this.data.idNum)
+    // console.log(app.globalData.movieList)
+  },
+  neverWatch: function() {
+    this.setData({
+      love : true
+    })
+    app.globalData.movieList.splice(this.data.idNum - 1, 1)
+    console.log(app.globalData.movieList)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

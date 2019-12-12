@@ -1,0 +1,35 @@
+<!--pages/wantWatch/wantWatch.wxml-->
+<view class="want-watch">
+  <view class="text" wx:if="{{sum === ''}}">
+    <span>亲，你还没告诉过我想看什么电影哦~</span>
+  </view>
+  <view class="movie-list" wx:else>
+    <view class="movie-header">
+      <span>共{{sum}}部电影</span>
+    </view>
+    <view class="movie-lists" wx:for="{{movie}}" wx:key="item" bindtap="movieDetail" data-id="{{item.id}}">
+      <view class="item-left">
+        <image src="{{item.details.img}}" />
+      </view>
+      <view class="item-middle">
+        <view class="movie-name">
+          <text class="movie-name-list">{{item.details.name}}</text>
+        </view>
+        <view>
+          <view class="movie-score">
+            <text class="movie-score-where">淘票票评分</text>
+            <text class="movie-score-number">{{item.details.grades}}</text>
+          </view>
+          <view class="show-time">
+            <text class="date">{{item.details.date}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="item-right">
+        <view class="way">
+          <text class="way buy-ticket">购票</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

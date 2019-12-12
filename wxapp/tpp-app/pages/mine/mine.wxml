@@ -24,7 +24,7 @@
         <span class="tab">我的小食</span>
       </li>
       <li>
-        <span class="tab">想看的电影</span>
+        <span class="tab" bindtap="wantWatch">想看的电影</span>
       </li>
       <li>
         <span class="tab">看过的电影</span>

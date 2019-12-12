@@ -4,7 +4,8 @@
     "pages/movieDetails/movieDetails",
     "pages/cinema/cinema",
     "pages/city/city",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/wantWatch/wantWatch"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

@@ -46,6 +46,11 @@ Page({
       }
     })
   },
+  wantWatch() {
+    wx.navigateTo({
+      url: '/pages/wantWatch/wantWatch'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
