@@ -4,14 +4,15 @@ import HelloWorld from '@/components/HelloWorld'
 import A from '@/components/pages/A'
 import Parent from '@/components/views/parent'
 import Show from '@/components/form/show'
+import Display from '@/components/Display'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Display',
+      component: Display
     }
   ]
 })

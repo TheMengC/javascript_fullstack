@@ -12,7 +12,7 @@
     <!-- <i-button size="large" ref="sure" @click.native="oSure" @message="getMessage">确认</i-button>
     <h1>{{mess}}</h1> -->
 
-    <div class="button" @click="showToast">fire</div>
+    <!-- <div class="button" @click="showToast">fire</div> -->
   </div>
 </template>
 
