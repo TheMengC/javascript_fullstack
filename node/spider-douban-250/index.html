@@ -14,10 +14,10 @@
     <li></li>
   </ul>
   <script>
-    fetch('http://localhost:3000')
+    fetch('http://localhost:4000')
       .then(res => res.json())
       .then(data => {
-        // console.log('data', data);
+        console.log('data', data);
         const ulNode = document.querySelector('ul');
         let html = data.map(movie => {
           return `
