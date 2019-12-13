@@ -2,10 +2,10 @@ const https = require('https');
 const http = require('http');
 const cheerio = require('cheerio');
 
-// doubanSpider('https://movie.douban.com/top250?start=0&filter=', (data)=> {
-//   //得到结果
-//   console.log(data);
-// })
+doubanSpider('https://m.jd.com/', (data)=> {
+  //得到结果
+  console.log(data);
+})
 
 function doubanSpider(url, cb) {
   https.get(url, (res) => {
@@ -19,12 +19,12 @@ function doubanSpider(url, cb) {
     //jquery
     const $ = cheerio.load(html);
     let movies = [];
-    $('li .item').each(function() {
+    $('.mall_nav_1 a').each(function() {
       //拿到每一个电影
-      const picUrl = $('.pic img', this).attr('src');
-      const title = $('.info .title', this).text();
-      const star = $('.star .rating_num', this).text();
-      const inq = $('.inq', this).text();
+      const picUrl = $('img', this).attr('src');
+      const title = $('span', this).text();
+      // const star = $('.star .rating_num', this).text();
+      // const inq = $('.inq', this).text();
       // console.log({
       //   picUrl,
       //   title,
@@ -41,9 +41,9 @@ function doubanSpider(url, cb) {
 
       movies.push({
         picUrl,
-        title,
-        star,
-        inq
+        title
+        // star,
+        // inq
       })
     })
     cb(movies);
@@ -52,7 +52,7 @@ function doubanSpider(url, cb) {
 }
 
 http.createServer((req, res) => {
-  doubanSpider('https://h5.m.taopiaopiao.com/app/moviemain/pages/index/index.html?from=outer', (data) => {
+  doubanSpider('https://m.jd.com/', (data) => {
     // text/pain 纯文本
     // text/html html
     // mine  类型
@@ -63,6 +63,6 @@ http.createServer((req, res) => {
     })
     res.end(JSON.stringify(data))  //把一个对象变成字符串    end要求必须是字符串
   })
-}).listen(3000, () => {
-  console.log('server is running 3000');
+}).listen(4000, () => {
+  console.log('server is running 4000');
 })
