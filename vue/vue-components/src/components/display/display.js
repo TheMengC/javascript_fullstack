@@ -24,5 +24,6 @@ function str32 () {
     str += $chars.charAt(Math.floor(Math.random() * maxPos)) 
   }
   return str
+  
 }
 
