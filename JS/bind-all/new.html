@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 判断一个函数有没有被 new 调用 -->
+  <script>
+    function Foo() {
+      // 1. {}
+      // 2.继承 Foo.prototype
+      // 往这个对象上面  添加属性
+      // 4. return {}
+      console.log(this instanceof Foo)  // true 则被 new 调用了
+    }
+    var a = new Foo()
+  </script>
+</body>
+</html>
