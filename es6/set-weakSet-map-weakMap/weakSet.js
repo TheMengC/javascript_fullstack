@@ -51,5 +51,5 @@ class Foo {
   }
 }
 let faa = new Foo()
-console.log(faa.method())
+
 // 保证Foo的实例只能在Foo的实例上调用
