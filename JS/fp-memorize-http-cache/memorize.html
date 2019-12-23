@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let mapAdd = new Map()
+    function add(a) {
+      //缓存里面 有没有
+      if (mapAdd.has(a)) {
+        return mapAdd.get(a)
+      }
+      let res = a + 30
+      mapAdd.set(a, res)
+      return res 
+    }  
+
+
+    let mapReduce = new Map()
+    function reduce (c, d) {
+      let key = JSON.stringify(Array.from(arguments))
+      if (mapReduce.has(key)) return mapReduce.get(key)
+      let res = c - d
+      mapReduce.set(key, res)
+      return res
+    }
+
+
+    function sum(a, b, c) {
+      return a + b + c
+    }
+
+    // 过程抽象
+    // 体现在：高阶函数
+
+
+    // add / reduce
+    // 相同：缓存的过程 1 2 3
+    // 不同的： 干的活不一样，函数
+    function memorize(fn) {
+      let cache = new Map()
+      // fn -> memorizeFn
+      return (...args) => {
+        let key = JSON.stringify(args)
+        if(cache.has(key)) {
+          return cache.get(key)
+        }
+        // 计算
+        let res = fn(...args)
+        cache.set(key, res)
+        return res
+      }
+    }
+    const mSum = memorize(sum)
+    mSum(1, 2, 3) //计算
+    mSum(1, 2, 3) //不用计算
+  </script>
+</body>
+</html>
