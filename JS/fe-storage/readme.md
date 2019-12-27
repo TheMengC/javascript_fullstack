@@ -18,3 +18,9 @@ path: 路径
 /mobile
 
 domain + path : 构成 cookie 生小范围
+
+expires/Max-Age: 生效的时间
+
+httpOnly: 
+cookie 来源：1.服务端  2. js
+httpOnly如果为true， cookie 不可以被 js 操作的
