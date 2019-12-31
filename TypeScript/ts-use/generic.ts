@@ -75,22 +75,31 @@ getValue(a, 'age')
 
 
 //使用多重类型进行泛型约束
-interface FirstInterface {
-  doSomthing(): number
-}
-interface SecondtInterface {
-  doSomthingElse(): string
-}
+// interface FirstInterface {
+//   doSomthing(): number
+// }
+// interface SecondtInterface {
+//   doSomthingElse(): string
+// }
 
-interface childInterface extends FirstInterface, SecondtInterface {
+// interface childInterface extends FirstInterface, SecondtInterface {
 
-}
+// }
 
-class Demo<T extends childInterface> {
-  private genericProperty: T
+// class Demo<T extends childInterface> {
+//   private genericProperty: T
 
-  useT() {
-    this.genericProperty.doSomthing()
-    this.genericProperty.doSomthingElse()
-  }
+//   useT() {
+//     this.genericProperty.doSomthing()
+//     this.genericProperty.doSomthingElse()
+//   }
+// }
+
+
+
+//泛型与new
+// {new() : T} 泛型可被构造、
+
+function factory<T> (type:{new() : T}): T {
+  return new type()
 }
