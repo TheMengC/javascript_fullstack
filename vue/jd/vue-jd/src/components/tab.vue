@@ -1,7 +1,7 @@
 <template>
   <div class="tab">
     <router-link to="/recommend" tag="div" class="tab-item">
-      <i class="image">{{tab.jd}}</i>
+      <img :src="tab.jd" class="image">
       <!-- <img src="" class="image"> -->
     </router-link>
     <router-link to="/singer" tag="div" class="tab-item">
@@ -24,27 +24,29 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      tab: [
-        {
-          jd: require("../image/shouye-select.png"),
-          unJd: require("../image/shouye-select.png")
-        },
-        {
-          class: require("../image/shouye-select.png"),
-          unClass: require("../image/shouye-select.png")
-        },
-        {
-         unShop: require("../image/shouye-select.png")
-        },
-        {
-          unLogin: require("../image/shouye-select.png")
-        },
-        {
-          mine: require("../image/shouye-select.png"),
-          unMine: require("../image/shouye-select.png")
-
-        }
-      ]
+      tab: {
+        jd: require("./../image/shouye-select.png")
+      }
+      // tab: [
+      //   {
+      //     jd: require("./../image/shouye-select.png"),
+      //     unJd: require("../image/shouye.png")
+      //   },
+      //   {
+      //     class: require("../image/class.png"),
+      //     unClass: require("../image/class-select.png")
+      //   },
+      //   {
+      //    unShop: require("../image/shop.png")
+      //   },
+      //   {
+      //     unLogin: require("../image/unLogin.png")
+      //   },
+      //   {
+      //     mine: require("../image/mine-select.png"),
+      //     unMine: require("../image/mine.png")
+      //   }
+      // ]
     }
   },
   // created () {
@@ -69,7 +71,7 @@ export default {
 .tab-item{
   flex: 1;
 }
-image{
+.image{
   position: absolute;
   width: 100%;
   height: 100%;
