@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function pageChange() {
+      console.log(location.href, '记录+1')
+    }
+    window.addEventListener('hashChange', pageChange)
+    // 前进/后退
+    // push/back
+    // go(1) / go(-1)
+
+    // pushState / replaceState
+    let method = window.history.pushState
+    window.history.pushState = function (...args) {
+      setTimeout(() => {
+        pageChange()
+      }, 0)
+      return method.call(window.history, args)
+    }
+  </script>
+</body>
+</html>
