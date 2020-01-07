@@ -1,17 +1,41 @@
 <template>
-  <div class="blogpost">
-    <h2>test</h2>
+  <div class="blogpost " :class="{highlighted: post.highlighted}">
+    <h2>{{post.title}}</h2>
+    <p v-if="post.highlighted">This post is highlighted!</p>
+    <p>{{post.body}}</p>
+    <p class="meta">Written by {{post.author}} on {{date}}</p>
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import {Vue, Prop, Component} from "vue-property-decorator"
 
+export interface Post {
+  title: string;
+  body: string;
+  author: string;
+  dataPosted: Date;
+  highlighted?: boolean
+}
+@Component
+export default class BlogPost extends Vue {
+  @Prop() post!: Post
+
+  get date() {
+    return `${this.post.dataPosted.getDate()}/${this.post.dataPosted.getMonth() + 1}/${this.post.dataPosted.getFullYear()}`
+  }
 }
 </script>
 
 <style lang="stylus">
   .blogpost
+    width 400px
+    margin 0 auto
     h2
       text-decoration underline
+    .meta
+      font-style italic
+  .highlighted
+    border 1px solid #f4d942
+    background-color #fff3b2
 </style>
