@@ -4,18 +4,18 @@
     <div class="content">
       <div class="home-header">
         <router-link class="link" to="/home">
-          <img src="../assets/1001685.jpg" alt="" class="home-logo">
+          <img src="../assets/logo.jpeg" alt="" class="home-logo">
         </router-link>
       </div>
       <div class='home-body'>
         <div class='list'>
           <router-link class='link' to='/articles'>文章</router-link>
           <router-link class='link' to='/project'>项目</router-link>
-          <a class='link' target='_blank' href='https://github.com/cleversnail'>Github</a>
-          <a class='link' target='_blank' href='https://github.com/cleversnail'>掘金</a>
-          <a class='link' target='_blank' href='https://github.com/cleversnail'>知乎</a>
-          <a class='link' target='_blank' href='https://github.com/cleversnail'>segmentfault</a>
-          <a class='link' target='_blank' href='https://github.com/cleversnail'>简书</a>
+          <a class='link' target='_blank' href='https://github.com/TheMengC'>Github</a>
+          <a class='link' target='_blank' href='https://juejin.im/user/5d6e34b16fb9a06ada54cdf7'>掘金</a>
+          <a class='link' target='_blank' href='https://github.com/TheMengC'>知乎</a>
+          <a class='link' target='_blank' href='https://github.com/TheMengC'>segmentfault</a>
+          <a class='link' target='_blank' href='https://github.com/TheMengC'>简书</a>
         </div>
       </div>
       <div class="introduce">我不怕千万人的阻挡，只怕自己投降</div>
