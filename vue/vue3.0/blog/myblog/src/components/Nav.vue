@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="nav">
-
       <div class="nav-content">
         <el-row :gutter="20">
           <el-col :span="3">
@@ -35,7 +34,7 @@
         </el-row>
       </div>
     </div>
-    <RegisterAndLogin></RegisterAndLogin>
+    <RegisterAndLogin :visible="visable" @cancel="handleCancel" :handleFlag="handleFlag"></RegisterAndLogin>
   </div>
 </template>
 
@@ -87,7 +86,19 @@ export default class Nav extends Vue{
     }
   ]
 
+  private visable: boolean = false
+  private handleFlag: string = ""
+
   private handleClick(value: string): void {
+    this.visable = true
+    this.handleFlag = value
+  }
+
+  private handleCancel(value: boolean) {
+    this.visable = value
+  }
+
+  private handleSelect() {
 
   }
 }

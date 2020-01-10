@@ -61,7 +61,7 @@ export default class Articles extends Vue {
 
   private async handleSearch(): Promise<void> {
     const data = await this.$https.get('http://yapi.demo.qunar.com/mock/51474/vue-ts-blog/articles')
-    console.log(data)
+    // console.log(data)
     if (data.list.length) {
       this.articlesList = [...this.articlesList, ...data.list]
     }
