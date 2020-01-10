@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Foo() {
+      // 不加 let var const getName声明是全局的
+      getName = function() {
+        console.log(1)
+      }
+      return this
+    }
+    Foo.getName = function() {
+      console.log(2)
+    }
+    Foo.prototype.getName = function () {
+      console.log(3)
+    }
+    var getName = function() {
+      console.log(4)
+    }
+    function getName() {
+      console.log(5)
+    }
+
+
+    Foo.getName()  // 2
+    getName() // 4
+    Foo().getName() // 1
+    getName()  // 5  ×  1
+
+
+    // . 优先级：19
+    // new 优先级：无参数列表 18
+    new Foo.getName() // 3 ×   2
+    // new 优先级：有参数列表  19
+    new Foo().getName() // 3
+    new new Foo().getName() // 3
+  </script>
+</body>
+</html>
