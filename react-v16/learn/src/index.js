@@ -27,13 +27,13 @@ class Counter extends React.Component {
     console.log('componentDidMount  函数触发')
   }
   // 避免组件重复或者无意义的渲染
-  shouldComponentUpdate(nextProps, nextState) {
-    // console.log(nextProps, nextState)
-    if(nextState.num % 2) {
-      return true
-    }
-    return false
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   // console.log(nextProps, nextState)
+  //   if(nextState.num % 2) {
+  //     return true
+  //   }
+  //   return false
+  // }
   handleClick() {
     this.setState({
       num: this.state.num +1
