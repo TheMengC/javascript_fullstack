@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+import {Tabbar, TabbarItem} from 'vant'
+
+Vue.use(Tabbar).use(TabbarItem)
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios

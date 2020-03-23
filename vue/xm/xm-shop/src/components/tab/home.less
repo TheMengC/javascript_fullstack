@@ -1,0 +1,57 @@
+.home{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  .header{
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    position: fixed;
+    z-index: 99;
+    height: 5rem;
+    align-items: center;
+    background-color: #f2f2f2;
+
+    .header-wrapper{
+      position: absolute;
+      width: 100%;
+      top: 0;
+      height: 2.6rem;
+      display: flex;
+
+      div:nth-child(1) {
+        width: 3.8rem;
+        height: 2.6rem;
+        line-height: 2.6rem;
+        position: relative;
+        // background-color: red;
+
+        img{
+          position: absolute;
+          margin:0.8rem 1rem;
+          width: 1.8rem;
+        }
+      }
+
+      div:nth-child(3) {
+        width: 3.8rem;
+        height: 2.6rem;
+        line-height: 2.6rem;
+        position: relative;
+        right: 0;
+
+        img{
+          position: absolute;
+          margin:0.8rem 1.2rem;
+          width: 1.4rem;
+        }
+      }
+      
+      div:nth-child(2) {
+        flex: 1;
+        background-color: red;
+      }
+    }
+  }
+  
+}
