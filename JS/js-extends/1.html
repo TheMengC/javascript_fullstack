@@ -16,8 +16,8 @@
 
     var p = new Person()
     console.log(p)
-    // console.log(p.__proto__ === Person.prototype)
-    // console.log(Person.prototype.constructor === Person)
+    console.log(p.__proto__ === Person.prototype)
+    console.log(Person.prototype.constructor === Person)
 
     function Student() {
 
@@ -33,7 +33,7 @@
       F.prototype = obj
       return new F()
     }
-    Student.prototype = Object.myCreate(Person.prototype)
+    // Student.prototype = Object.myCreate(Person.prototype)
     var s = new Student()
     console.log(s)
 

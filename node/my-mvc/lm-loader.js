@@ -20,9 +20,10 @@ function load (dir, cb) {
 
 
 // 加载路由
-function initRouter () {
+function initRouter (app) {
   const router = new Router()
   load('routes', (filename, routes) => {
+    routes = typeof routes === 'function' ? routes(app) : routes
     const prefix = filename === 'index' ? '' : `/${filename}`
     Object.keys(routes).forEach(key => {
       const [method, path] = key.split(' ') // [get, /]
@@ -30,14 +31,38 @@ function initRouter () {
 
       //注册路由
       // app.get('/', ctx => {})
-      router[method](prefix + path, routes[key])
+      // router[method](prefix + path, routes[key])
+      router[method](prefix + path, async ctx => {
+        app.ctx = ctx
+        await routes[key](app)
+      })
     })
   })
   return router
 }
 
+
+function initController () {
+  const controllers = {}
+  load('controller', (filename, controller) => {
+    controllers[filename] = controller
+  })
+  return controllers
+}
+
+function initService () {
+  const services = {}
+  load('service', (filename, service) => {
+    services[filename] = service
+  })
+  return services
+}
+
+
 module.exports = {
-  initRouter
+  initRouter,
+  initController,
+  initService
 }
 
 // load('routes', filename => console.log('routes:' + filename))
